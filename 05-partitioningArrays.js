@@ -1,7 +1,6 @@
 // partition the array
 // [2, 0, 4, 3, 0, 1, 0, 0] => [0,0,0,0,2,4,3,1]
-
-// Todo: Solve this in O(1) space complexity.
+// NOTE: zeroes will be first and order of non zero doesn't matter.
 
 // Brute Force approach
 // scan the array and push all the zeroes
@@ -26,4 +25,20 @@ function zeroesInFront(arr) {
   // Time : O(N + N) = O(N)
   // Space : O(N) as new array of same size was created
 }
-zeroesInFront([2, 0, 4, 3, 0, 1, 0, 0]);
+
+// [2, 0, 4, 3, 0, 1, 0, 0]
+function zeroesOpt(arr) {
+  let start = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+      [arr[i], arr[start]] = [arr[start], arr[i]];
+      start++;
+    }
+  }
+  console.log(arr);
+  // Time : O(N)
+  // Space : O(1)
+}
+zeroesOpt([2, 0, 4, 3, 0, 1, 0, 0]);
+
+// Variables names: cloud, boundary, runner, blanket, fast, slow etc
