@@ -27,6 +27,8 @@ function zeroesInFront(arr) {
 }
 
 // [2, 0, 4, 3, 0, 1, 0, 0]
+// Here we start from zeroIndex and look for 0
+// then swap zeroIndex with that index value
 function zeroesOpt(arr) {
   let start = 0;
   for (let i = 0; i < arr.length; i++) {
