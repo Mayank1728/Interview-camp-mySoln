@@ -43,18 +43,20 @@ function dnf(arr, pivot) {
   let end = arr.length - 1;
   let runner = start;
   console.log(arr);
-  while (runner < end) {
+  while (runner <= end) {
     if (arr[runner] < pivot) {
       [arr[runner], arr[start]] = [arr[start], arr[runner]];
       start++;
+      runner++;
     } else if (arr[runner] > pivot) {
       [arr[runner], arr[end]] = [arr[end], arr[runner]];
       end--;
+    } else {
+      runner++;
     }
     console.log(arr);
-    runner++;
   }
   // Time : O(N)
   // Space : O(1)
 }
-dnf([1, 4, 5, 6, 2, 4, 4, 3], 4);
+dnf([1, 4, 5, 6, 3, 4, 4, 9], 4);
