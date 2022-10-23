@@ -48,6 +48,5 @@ function sortedSquare(arr) {
   console.log(a);
   // Time : O(N)
   // Space : O(N)
-  // Todo : Achieve this in O(1) space
 }
 sortedSquare([-4, -2, 1, 0, 3, 5]);
