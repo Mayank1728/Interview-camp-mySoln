@@ -1,6 +1,7 @@
 // partition the array
 // [2, 0, 4, 3, 0, 1, 0, 0] => [0,0,0,0,2,4,3,1]
 // NOTE: zeroes will be first and order of non zero doesn't matter.
+// follow up : do this in place which means O(1) space.
 
 // Brute Force approach
 // scan the array and push all the zeroes
