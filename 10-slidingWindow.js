@@ -8,6 +8,11 @@
 
 // Edge cases explaination with example
 /*
+  Approach: Because all numbers are positive, increasing the size
+            of the window will increase the sum and decreasing 
+            size of the window will decrease the sum.
+*/
+/*
   Edge case 2: 
       [5, 3, 1], target = 4
       start = 0, end = 0;
