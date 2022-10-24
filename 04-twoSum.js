@@ -1,6 +1,6 @@
 // Two sum problem
 // Given an SORTED array, find 2 elements which add upto the target
-// [1, 2, 4], target = 9 => [2,3]
+// [1, 2, 4], target = 6 => [2,3]
 
 // using 2 pointer approach
 function twoSum(arr, target) {
