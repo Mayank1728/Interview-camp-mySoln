@@ -8,13 +8,15 @@ function possibleComb(arr) {
   let firstEl = arr[0];
   let restEl = arr.slice(1); // returns arr from index 1 to lastIndex
   let combWithoutFirst = possibleComb(restEl);
-  // [ [], ['b'], ['c'], ['b', 'c']]
+  // [ [],['c']]
   let combWithFirst = [];
   for (let i = 0; i < combWithoutFirst.length; i++) {
+    // Actually this can be understood as
     let comb = [...combWithoutFirst[i]];
-    // deep copy each nested array at i th index
-    // This is done so that i don't destroy the original combWithoutFirst
-    // Array.
+    // comb = combWithoutFirst[i]
+    // but as js passes arrays as reference not values
+    // so we use spread operator to deep copy
+    // not to destory the original array accidentally
 
     comb.push(firstEl);
     // Now push firstEl to comb
